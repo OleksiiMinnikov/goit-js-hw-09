@@ -23,11 +23,13 @@ function getRandomColor() {
 // Обробник події при натисканні на кнопку "Start"
 function handleStartButtonClick() {
   intervalId = setInterval(changeBackgroundColor, 1000);
+  startButton.disabled = true; // Вимикаємо кнопку "Start"
 }
 
 // Обробник події при натисканні на кнопку "Stop"
 function handleStopButtonClick() {
   clearInterval(intervalId);
+  startButton.disabled = false; // Включаємо кнопку "Start"
 }
 
 // Додаємо обробники подій до кнопок
